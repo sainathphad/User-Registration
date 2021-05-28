@@ -9,6 +9,7 @@ public class UserRegistration {
     public static final String NAME_PATTERN = "^[A-Z][a-z]{3,}$";
     public static final String EMAIL_PATTERN = "^[0-9A-Za-z]+([-_+.][0-9A-Za-z]+)?[@][a-zA-Z0-9]+" +
                                                                 "[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$";
+    public static final String MOBILE_NUM_PATTERN = "^[+][0-9]{2}[1-9][0-9]{9}$";
 
     //PATTERN CHECK
     public boolean checkFirstName(String firstName){
@@ -21,6 +22,10 @@ public class UserRegistration {
 
     public static boolean checkEmail(String email){
         return patternChecker(email, EMAIL_PATTERN);
+    }
+
+    public static boolean checkMobileNum(String mobileNum) {
+        return patternChecker(mobileNum, MOBILE_NUM_PATTERN);
     }
 
     //PATTERN CHECK METHOD

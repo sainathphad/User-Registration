@@ -18,4 +18,11 @@ public class UserRegistrationTest {
         boolean status = userRegistration.checkLastName("Labz");
         Assert.assertTrue(status);
     }
+
+    @Test
+    public void givenMobileNumber_whenValid_returnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean status = userRegistration.checkMobileNum("+918602094265");
+        Assert.assertTrue(status);
+    }
 }
