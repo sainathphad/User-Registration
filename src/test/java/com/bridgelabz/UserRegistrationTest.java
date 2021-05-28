@@ -39,4 +39,11 @@ public class UserRegistrationTest {
         boolean status = userRegistration.checkPassword("abCd@123");
         Assert.assertTrue(status);
     }
+
+    @Test
+    public void givenPassword_whenHave_Min1NumericNum_returnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean status = userRegistration.checkPassword("abCd@123");
+        Assert.assertTrue(status);
+    }
 }
