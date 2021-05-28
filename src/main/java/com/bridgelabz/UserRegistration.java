@@ -10,7 +10,7 @@ public class UserRegistration {
     public static final String EMAIL_PATTERN = "^[0-9A-Za-z]+([-_+.][0-9A-Za-z]+)?[@][a-zA-Z0-9]+" +
                                                                 "[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$";
     public static final String MOBILE_NUM_PATTERN = "^[+][0-9]{2}[1-9][0-9]{9}$";
-    public static final String PASSWORD_PATTERN = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+    public static final String PASSWORD_PATTERN = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@$%?&]).{8,}$";
 
 
     //PATTERN CHECK
