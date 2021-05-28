@@ -29,7 +29,14 @@ public class UserRegistrationTest {
     @Test
     public void givenPassword_whenMin8Character_returnTrue() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean status = userRegistration.checkPassword("abcd@123");
+        boolean status = userRegistration.checkPassword("abCd@123");
+        Assert.assertTrue(status);
+    }
+
+    @Test
+    public void givenPassword_whenHave_Min1UpperCase_returnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean status = userRegistration.checkPassword("abCd@123");
         Assert.assertTrue(status);
     }
 }
