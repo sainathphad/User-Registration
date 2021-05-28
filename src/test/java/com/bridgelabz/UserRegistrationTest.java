@@ -25,4 +25,11 @@ public class UserRegistrationTest {
         boolean status = userRegistration.checkMobileNum("+918602094265");
         Assert.assertTrue(status);
     }
+
+    @Test
+    public void givenPassword_whenMin8Character_returnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean status = userRegistration.checkPassword("abcd@123");
+        Assert.assertTrue(status);
+    }
 }
